@@ -98,7 +98,12 @@ public class Revex {
 				int end = input.indexOf('}', offset);
 				
 				String[] temp = input.substring(offset, end).split(",");
-				node.setBounds(Integer.parseInt(temp[0]), Integer.parseInt(temp[1]));
+				if (temp.length == 2) {
+					node.setBounds(Integer.parseInt(temp[0]), Integer.parseInt(temp[1]));
+				}
+				else {
+					node.setBounds(Integer.parseInt(temp[0]), -1);
+				}
 				
 				offset = end + 1;
 			}
