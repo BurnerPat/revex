@@ -55,7 +55,7 @@ public abstract class Node {
 		if (min != max) {
 			Random rand = new Random();
 			if (max >= 0) {
-				amt += rand.nextInt(max - min);
+				amt += rand.nextInt(max - min + 1);
 			}
 			else {
 				amt += rand.nextInt(parent.getUndefinedMax());
